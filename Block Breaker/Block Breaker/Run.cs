@@ -4,15 +4,17 @@ using Block_Breaker.Menu.KeyGetters;
 
 namespace Block_Breaker
 {
-    class Run
+    internal class Run
     {
-        static void Main()
+        private static void Main()
         {
-            Console.CursorVisible = false;
-            var display = new BasicDisplay();
-            var keyGetter = new KeyGetter();
+            var finished = false; // Signals when the program should end
 
-            string[] options = new[]
+            Console.CursorVisible = false; // Makes the cursor invisible
+            var display = new BasicDisplay(); // Chosen display
+            var keyGetter = new KeyGetter(); // Chosen KeyGetter
+
+            var options = new[] // Options to choose from TODO: Refactor this into an enum
             {
                 "Play",
                 "Options",
@@ -21,10 +23,17 @@ namespace Block_Breaker
                 "Exit"
             };
 
-            var mainMenu = new Menu.Menu(display, keyGetter);
-            mainMenu.SetOptions(options);
+            var mainMenu = new Menu.Menu(display, keyGetter); // New menu
+            mainMenu.SetOptions(options); // Assign the options
 
-            var userSelection = mainMenu.GetSelection();
+
+            while (!finished) // Main program loop
+            {
+                var userSelection = mainMenu.GetSelection(); // Get selection
+            }
+            
+
+
         }
     }
 }
