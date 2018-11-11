@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Run.cs" />
     <Compile Include="Menu\Displays\BasicDisplay.cs" />
     <Compile Include="Menu\Displays\FancyDisplay.cs" />
     <Compile Include="Menu\Interfaces\IDisplay.cs" />

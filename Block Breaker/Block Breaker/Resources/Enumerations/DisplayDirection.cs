@@ -4,7 +4,7 @@
     {
         Up,
         Down,
-        Stay,
-        Select
+        Select,
+        Stay
     }
 }

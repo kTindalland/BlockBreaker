@@ -35,7 +35,7 @@ namespace Block_Breaker.Menu
         }
 
         /// <summary>
-        /// Gets the key pressed and switches on what to do
+        /// Gets the key pressed and switches on what to do.
         /// </summary>
         private void SwitchOnKey()
         {
@@ -53,6 +53,17 @@ namespace Block_Breaker.Menu
                     _finished = true;
                     break;
             }
+
+            ValidateSelectedOption();
+        }
+
+        private void ValidateSelectedOption()
+        {
+            if (_selectedOption >= _options.Length)
+                _selectedOption = 0;
+
+            if (_selectedOption < 0)
+                _selectedOption = _options.Length - 1;
         }
     }
 }
