@@ -1,5 +1,4 @@
-﻿using System;
-using Block_Breaker.Menu.Interfaces;
+﻿using Block_Breaker.Menu.Interfaces;
 using Block_Breaker.Resources.Enumerations;
 
 namespace Block_Breaker.Menu
