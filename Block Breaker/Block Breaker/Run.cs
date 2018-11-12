@@ -30,10 +30,33 @@ namespace Block_Breaker
             while (!finished) // Main program loop
             {
                 var userSelection = mainMenu.GetSelection(); // Get selection
+
+                switch (userSelection) // Switch on chosen option
+                {
+                    case "Play":
+                        break;
+
+                    case "Options":
+                        break;
+
+                    case "Instructions":
+                        break;
+
+                    case "Scoreboard":
+                        break;
+
+                    case "Exit":
+                        break;
+                }
             }
             
 
 
+        }
+
+        static void ShowInstructions()
+        {
+           
         }
     }
 }

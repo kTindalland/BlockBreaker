@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockBreakerMk2", "BlockBreakerMk2\BlockBreakerMk2.csproj", "{2338BA3D-70DB-422C-B523-0666BFCA2FDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2338BA3D-70DB-422C-B523-0666BFCA2FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2338BA3D-70DB-422C-B523-0666BFCA2FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2338BA3D-70DB-422C-B523-0666BFCA2FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2338BA3D-70DB-422C-B523-0666BFCA2FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6670F922-54B4-4476-AFDA-FA912BC4D8C8}
+	EndGlobalSection
+EndGlobal
