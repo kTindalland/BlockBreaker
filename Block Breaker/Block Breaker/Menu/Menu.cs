@@ -1,4 +1,5 @@
-﻿using Block_Breaker.Menu.Interfaces;
+﻿using System;
+using Block_Breaker.Menu.Interfaces;
 using Block_Breaker.Resources.Enumerations;
 
 namespace Block_Breaker.Menu
@@ -57,6 +58,9 @@ namespace Block_Breaker.Menu
             ValidateSelectedOption();
         }
 
+        /// <summary>
+        /// Check to make sure that the selected option variable is valid; and if it isn't, make it valid.
+        /// </summary>
         private void ValidateSelectedOption()
         {
             if (_selectedOption >= _options.Length)
