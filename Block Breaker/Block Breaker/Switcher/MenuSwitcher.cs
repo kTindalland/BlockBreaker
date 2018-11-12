@@ -13,7 +13,6 @@ namespace Block_Breaker.Switcher
         {
             throw new NotImplementedException();
         }
-
-        private void ShowInstructions
+        
     }
 }

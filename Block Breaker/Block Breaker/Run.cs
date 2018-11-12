@@ -1,6 +1,10 @@
 ﻿using System;
 using Block_Breaker.Menu.Displays;
 using Block_Breaker.Menu.KeyGetters;
+using Block_Breaker.Options.Exit;
+using Block_Breaker.Options.Instructions;
+using Block_Breaker.Options.Play;
+using Block_Breaker.Options.Scoreboard;
 
 namespace Block_Breaker
 {
@@ -26,10 +30,22 @@ namespace Block_Breaker
             var mainMenu = new Menu.Menu(display, keyGetter); // New menu
             mainMenu.SetOptions(options); // Assign the options
 
+            var instructions = new Instructions();
+            var optionsObject = new Options.Options.Options();
+            var game = new Play();
+            var scoreboard = new Scoreboard();
+            var exiter = new Exit();
+
+            mainMenu.OptionSelected += instructions.OnOptionSelected;
+            mainMenu.OptionSelected += optionsObject.OnOptionSelected;
+            mainMenu.OptionSelected += game.OnOptionSelected;
+            mainMenu.OptionSelected += scoreboard.OnOptionSelected;
+            mainMenu.OptionSelected += exiter.OnOptionSelected;
+
 
             while (!finished) // Main program loop
             {
-                var userSelection = mainMenu.GetSelection(); // Get selection
+                mainMenu.GetSelection(); // Get selection
             }
             
 

@@ -42,6 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Options\Exit\Exit.cs" />
+    <Compile Include="Options\Instructions\Instructions.cs" />
+    <Compile Include="Options\Interfaces\IOption.cs" />
+    <Compile Include="Options\Options\Options.cs" />
+    <Compile Include="Options\Play\Play.cs" />
+    <Compile Include="Options\Scoreboard\Scoreboard.cs" />
+    <Compile Include="Resources\EventArgs\OptionSelectedEventArgs.cs" />
     <Compile Include="Run.cs" />
     <Compile Include="Menu\Displays\BasicDisplay.cs" />
     <Compile Include="Menu\Displays\FancyDisplay.cs" />

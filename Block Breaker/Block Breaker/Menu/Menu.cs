@@ -1,5 +1,6 @@
 ﻿using Block_Breaker.Menu.Interfaces;
 using Block_Breaker.Resources.Enumerations;
+using Block_Breaker.Resources.EventArgs;
 
 namespace Block_Breaker.Menu
 {
@@ -10,6 +11,10 @@ namespace Block_Breaker.Menu
         private string[] _options; // List of options to choose from.
         private int _selectedOption; // Index of currently selected option.
         private bool _finished; // If the user has pressed enter.
+
+        public delegate void OptionSelectedHandler(object sender, OptionSelectedEventArgs args);
+
+        public event OptionSelectedHandler OptionSelected; // Option selected event
 
         public Menu(IDisplay display, IKeyGetter keyGetter) // Dependency injection for testability.
         {
@@ -30,6 +35,10 @@ namespace Block_Breaker.Menu
                 _display.Display(_options, _selectedOption); // Display the options.
                 SwitchOnKey(); // Get key and choose what to do based on what was pressed.
             }
+
+            var eventArgs = new OptionSelectedEventArgs(); // Call event with chosen option as argument
+            eventArgs.ChosenOption = _options[_selectedOption];
+            OnOptionSelected(eventArgs);
 
             return _options[_selectedOption];
         }
@@ -67,6 +76,12 @@ namespace Block_Breaker.Menu
 
             if (_selectedOption < 0)
                 _selectedOption = _options.Length - 1;
+        }
+
+        protected void OnOptionSelected(OptionSelectedEventArgs e)
+        {
+            if (OptionSelected != null)
+                OptionSelected(this, e);
         }
     }
 }
