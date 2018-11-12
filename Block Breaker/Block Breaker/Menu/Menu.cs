@@ -5,11 +5,11 @@ namespace Block_Breaker.Menu
 {
     public class Menu : IMenu
     {
-        private readonly IDisplay _display;
-        private readonly IKeyGetter _keyGetter;
-        private string[] _options;
-        private int _selectedOption;
-        private bool _finished;
+        private readonly IDisplay _display; // Display object.
+        private readonly IKeyGetter _keyGetter; // KeyGetter object.
+        private string[] _options; // List of options to choose from.
+        private int _selectedOption; // Index of currently selected option.
+        private bool _finished; // If the user has pressed enter.
 
         public Menu(IDisplay display, IKeyGetter keyGetter) // Dependency injection for testability.
         {
@@ -25,10 +25,10 @@ namespace Block_Breaker.Menu
         public string GetSelection()
         {
             _finished = false;
-            while (!_finished)
+            while (!_finished) // Main loop
             {
-                _display.Display(_options, _selectedOption);
-                SwitchOnKey();
+                _display.Display(_options, _selectedOption); // Display the options.
+                SwitchOnKey(); // Get key and choose what to do based on what was pressed.
             }
 
             return _options[_selectedOption];
