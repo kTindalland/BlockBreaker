@@ -14,7 +14,7 @@ namespace Block_Breaker
             var display = new BasicDisplay(); // Chosen display
             var keyGetter = new KeyGetter(); // Chosen KeyGetter
 
-            var options = new[] // Options to choose from TODO: Refactor this into an enum
+            var options = new[] // Options to choose from
             {
                 "Play",
                 "Options",
